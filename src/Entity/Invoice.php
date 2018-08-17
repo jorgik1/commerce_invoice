@@ -812,4 +812,11 @@ class Invoice extends CommerceContentEntityBase implements InvoiceInterface {
     }
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function hasItem(OrderItemInterface $order_item) {
+    return $this->getItemIndex($order_item) !== FALSE;
+  }
+
 }
