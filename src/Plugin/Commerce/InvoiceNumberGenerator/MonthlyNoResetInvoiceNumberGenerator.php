@@ -25,7 +25,7 @@ class MonthlyNoResetInvoiceNumberGenerator extends InvoiceNumberGeneratorBase {
     $current_month = date('m');
     if (NULL === $invoice_number || $current_year != $invoice_number->getYear() || $current_month != $invoice_number->getMonth()) {
       // Either no order number has been provided or the period does not match.
-      $invoice_number = new InvoiceNumber($invoice_number->getIncrementNumber(), $current_year, $current_month);
+      $invoice_number = new InvoiceNumber($invoice_number ? $invoice_number->getIncrementNumber(): 0, $current_year, $current_month);
     }
     $invoice_number->increment();
     return $invoice_number;
