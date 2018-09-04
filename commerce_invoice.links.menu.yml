@@ -16,3 +16,10 @@ commerce_invoice.admin.structure.settings:
   description: 'Configure Invoice'
   route_name: commerce_invoice.settings
   parent: commerce_invoice.configuration
+
+commerce_stock_ui.stock_inventory:
+  title: 'Stock Inventory'
+  description: 'Config stock inventory'
+  route_name: commerce_stock.inventory_control
+  parent: 'commerce_stock.configuration'
+  weight: 40

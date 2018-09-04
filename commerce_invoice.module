@@ -9,6 +9,14 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
+function commerce_invoice_theme($existing, $type, $theme, $path) {
+  return [
+    'stock_inventory_control_form' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
 /**
  * Implements hook_entity_operation().
  */
